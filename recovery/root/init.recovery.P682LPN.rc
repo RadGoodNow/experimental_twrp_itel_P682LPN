@@ -1,0 +1,5 @@
+#add for board init.rc for recovery mode
+import /init.recovery.common.rc
+
+on init
+	insmod /mnt/vendor/odmko/adaptive-ts.ko

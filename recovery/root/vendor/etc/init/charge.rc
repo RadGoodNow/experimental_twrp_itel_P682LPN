@@ -1,0 +1,50 @@
+on property:ro.bootmode=charger
+    mkdir /mnt/vendor 0771 system system
+    mount ext4 /dev/block/by-name/prodnv /mnt/vendor
+    mount_all /vendor/etc/fstab.charge_mode --early
+    chown system system /mnt/vendor
+    chmod 0771 /mnt/vendor
+    chmod 664 /sys/power/wakeup_count
+
+on property:ro.debuggable=1
+    start console
+
+on early-init
+    start ueventd
+
+on charger
+#    exec_start apexd-bootstrap
+    class_start charger
+
+service ueventd /system/bin/ueventd
+    class core
+    critical
+    seclabel u:r:ueventd:s0
+    shutdown critical
+
+service apexd /system/bin/apexd
+    class core
+    critical
+    user root
+    group system
+    shutdown critical
+
+service apexd-bootstrap /system/bin/apexd --bootstrap
+    user root
+    group system
+    oneshot
+    disabled
+
+service console /system/bin/sh
+    class core
+    console
+    user shell
+    group shell log readproc
+    seclabel u:r:shell:s0
+    setenv HOSTNAME console
+
+service vendor.charge /vendor/bin/charge
+    class charger
+    group input system
+    user root
+    oneshot
