@@ -25,6 +25,16 @@ PRODUCT_PLATFORM := P682LPN
 
 #AB
 AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS += \
+    vbmeta \
+    vbmeta_system \
+    vbmeta_vendor \
+    dtbo \
+    boot \
+    system \
+    system_ext \
+    vendor \
+    product
 
 #AVB STUFF LOL. IT MAY HURT YOUR EYES IF YOU CONTINUE READING
 BOARD_AVB_ENABLE := true
