@@ -2,4 +2,4 @@
 import /init.recovery.common.rc
 
 on init
-	insmod /mnt/vendor/odmko/adaptive-ts.ko
+	insmod /vendor/lib/modules/adaptive-ts.ko
