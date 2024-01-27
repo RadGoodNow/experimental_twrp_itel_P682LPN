@@ -78,13 +78,13 @@ on init
 on boot
 	mkdir /dev/binderfs
 	mount binder binder /dev/binderfs/
-	mount binder binder /dev/binderfs/
 	symlink /dev/binderfs/binder /dev/binder
 	symlink /dev/binderfs/vndbinder /dev/vndbinder
 	symlink /dev/binderfs/hwbinder /dev/hwbinder
-	chmod 066 /dev/binder
-	chmod 066 /dev/hwbinder
-	chmod 066 /dev/vndbinder
+	chmod 0666 /dev/binder
+	chmod 0666 /dev/hwbinder
+	chmod 0666 /dev/vndbinder
+	chmod 0755 /dev/binderfs
 	start hwservicemanager
 	start servicemanager
 	start vndservicemanager
