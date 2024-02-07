@@ -37,6 +37,7 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 TARGET_KERNEL_CONFIG := P682LPN_defconfig
 TARGET_KERNEL_SOURCE := kernel/itel/P682LPN
 # Kernel - prebuilt
+#prebuilt kernel sucks
 TARGET_FORCE_PREBUILT_KERNEL := true
 ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
