@@ -38,4 +38,4 @@ Minor checks
 Finally, crashes are fixed.
 
 BTW, unofficialtwrp.com, stop stealing our TWRP images. We have warned you :) 
-and yeah fix your "Contact us" page
+and yeah fix your "Contact us" page, we want to talk with you guys.
