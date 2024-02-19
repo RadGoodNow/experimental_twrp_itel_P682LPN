@@ -20,7 +20,9 @@ on init
 	mkdir /dev/cpuset/system-background
 	chmod 755 /system/bin/logd
 	start logd
-	insmod /vendor/lib/modules/adaptive-ts.ko
+	mount /dev/block/by-name/socko /socko
+	mount /dev/block/dm-2 /vendor
+	find /socko/ -name "*.ko" | xargs insmod
 on boot
 	mkdir /dev/binderfs
 	mount binder binder /dev/binderfs/
