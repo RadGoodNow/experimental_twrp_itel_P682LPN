@@ -41,4 +41,5 @@ product                                  /product            ext4    ro,barrier=
 
 /dev/block/by-name/userdata              /data               f2fs    noatime,nosuid,nodev,discard,inline_xattr,inline_data wait,check,reservedsize=128M,formattable
 /dev/block/by-name/prodnv                /mnt/vendor         ext4    noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc     wait,check
-#/dev/block/mmcblk1p1                     /storage/sdcard0    auto    defaults    defaults
+/dev/block/mmcblk1p1                     /external_sd    auto    defaults    defaults
+/dev/block/sda1                          /usb-otg            vfat    defaults                        defaults
