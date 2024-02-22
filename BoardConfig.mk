@@ -8,11 +8,6 @@ DEVICE_PATH := device/itel/P682LPN
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 #ITEL DEVICE ARCHITECTURE. HARD TO UNDERSTAND WHAT THIS PIECE OF... CODE REALLY DOES
-#why are you capsing?
-#probably this is cpu architecture
-#idk why does twrp need to know that we have cortex a75 lmao
-#-it wont run without these flags dumbass
-#then it sucks
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
