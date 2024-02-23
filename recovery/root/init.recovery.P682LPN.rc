@@ -22,6 +22,8 @@ on init
 	start logd
 	mount_all /system/etc/recovery.tmpfsdata.fstab
 	insmod /socko/adaptive-ts.ko
+on property:ro.twrp.boot=1
+	write /sys/devices/platform/extcon-gpio/extcon_hostenable enabled
 on boot
 	mkdir /dev/binderfs
 	mount binder binder /dev/binderfs/
