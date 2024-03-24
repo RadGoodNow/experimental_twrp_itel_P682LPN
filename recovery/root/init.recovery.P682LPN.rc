@@ -35,13 +35,3 @@ on boot
 	chmod 0666 /dev/vndbinder
 	chmod 0755 /dev/binderfs
 	
-# We need vold early for metadata encryption
-on early-fs
-    start vold
-
-on late-fs
-    # Wait for keymaster
-    exec_start wait_for_keymaster
-
-    # Mount RW partitions which need run fsck
-    mount_all /vendor/etc/fstab.P682LPN --late
