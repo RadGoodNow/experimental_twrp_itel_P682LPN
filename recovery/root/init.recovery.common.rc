@@ -73,7 +73,6 @@ service gpsd /vendor/bin/gpsd
     group gps system shell inet net_raw wifi
 
 on init
-    insmod /vendor/lib/modules/adaptive-ts.ko
     # Apply strict SELinux checking of PROT_EXEC on mmap/mprotect calls.
     write /sys/fs/selinux/checkreqprot 0
     start healthd
@@ -87,12 +86,11 @@ on init
     chmod 660 /sys/bus/iio/devices/iio:device1/buffer/enable
     chmod 660 /sys/bus/iio/devices/iio:device1/trigger/current_trigger
 
-    export PATH /sbin:/system/bin:/vendor/bin
-    export SECONDARY_STORAGE /storage/sdcard0
+    export PATH /sbin:/system/bin:/system/xbin:/system_ext/bin:/vendor/bin:/vendor/xbin
+    export SECONDARY_STORAGE /external_sd
 
     mkdir /storage
-    mkdir /storage/sdcard1
-    mkdir /storage/sdcard0
+    symlink /external_sd /storage/sdcard0
     symlink /storage/sdcard0 /mnt/sdcard
     symlink /system/etc/bluetooth /etc/bluetooth
 
