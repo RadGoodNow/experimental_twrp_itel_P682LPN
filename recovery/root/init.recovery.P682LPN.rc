@@ -22,7 +22,7 @@ on init
 	start logd
 	mount_all /system/etc/recovery.tmpfsdata.fstab
 	insmod /socko/adaptive-ts.ko
-on boot
+	insmod /socko/mali_kbase.ko
 	mkdir /dev/binderfs
 	mount binder binder /dev/binderfs/
 	symlink /dev/binderfs/binder /dev/binder
@@ -32,5 +32,6 @@ on boot
 	chmod 0666 /dev/hwbinder
 	chmod 0666 /dev/vndbinder
 	chmod 0755 /dev/binderfs
+	mount tracefs tracefs /sys/kernel/tracing
 on property:ro.twrp.boot=1
 	write /sys/devices/platform/extcon-gpio/extcon_hostenable enabled
