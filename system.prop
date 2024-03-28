@@ -1,3 +1,4 @@
 ro.hardware=P682LPN
 ro.crypto.metadata.enabled=true
 ro.crypto.uses_fs_ioc_add_encryption_key=true
+ro.sys.usb.storage.type=adb,mtp
