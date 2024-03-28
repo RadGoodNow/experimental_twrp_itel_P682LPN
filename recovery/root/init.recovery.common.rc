@@ -67,11 +67,6 @@ service engpcclient /vendor/bin/engpc
     user root
     group root sdcard_rw system radio shell net_bt_admin input audio
 
-service gpsd /vendor/bin/gpsd
-    class core
-    user system
-    group gps system shell inet net_raw wifi
-
 on init
     # Apply strict SELinux checking of PROT_EXEC on mmap/mprotect calls.
     write /sys/fs/selinux/checkreqprot 0
@@ -153,7 +148,9 @@ on init
     mkdir /config/usb_gadget/g1/functions/gser.gs7 0770 shell shell
 
 on boot
-    setprop sys.usb.configfs 1
+    start boot-hal-1-1
+    start health-hal-2-1
+    start charger
     write /sys/block/mmcblk0boot0/force_ro 0
     write /sys/block/mmcblk0boot1/force_ro 0
 
