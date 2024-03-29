@@ -32,5 +32,3 @@ on init
 	chmod 0666 /dev/vndbinder
 	chmod 0755 /dev/binderfs
 	mount tracefs tracefs /sys/kernel/tracing
-on property:ro.twrp.boot=1
-	write /sys/devices/platform/extcon-gpio/extcon_hostenable enabled
