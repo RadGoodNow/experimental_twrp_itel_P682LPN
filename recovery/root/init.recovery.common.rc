@@ -241,7 +241,9 @@ on post-fs-data
     mkdir /mnt/vendor/productinfo 0771 system root
     mkdir /mnt/vendor/productinfo/sensor_calibration_data 0770 system root
     mkdir /data/vendor/local/otpdata 0777 system root
-
+    start hwservicemanager
+    symlink /external_sd /storage/sdcard0
+    symlink /external_sd /mnt/sdcard
 on property:ro.debuggable=1
     write /sys/module/smsg/parameters/debug_enable 1
 
