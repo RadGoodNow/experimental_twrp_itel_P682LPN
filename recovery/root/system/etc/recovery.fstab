@@ -30,10 +30,10 @@
 #/dev/block/by-name/logo                 /logo               emmc    defaults    defaults
 #/dev/block/by-name/fbootlogo            /fbootlogo          emmc    defaults    defaults
 
-system                                   /system             ext4    ro,barrier=1 wait,avb=vbmeta_system,logical,first_stage_mount,backup=1,slotselect
-system_ext                               /system_ext         ext4    ro,barrier=1 wait,avb=vbmeta_system_ext,logical,first_stage_mount,backup=1,slotselect
-vendor                                   /vendor             ext4    ro,barrier=1 wait,avb=vbmeta_vendor,logical,first_stage_mount,backup=1,slotselect
-product                                  /product            ext4    ro,barrier=1 wait,avb=vbmeta,logical,first_stage_mount,backup=1,slotselect
+system                                   /system             ext4    ro,barrier=1 wait,avb=vbmeta_system,logical,first_stage_mount,slotselect
+system_ext                               /system_ext         ext4    ro,barrier=1 wait,avb=vbmeta_system_ext,logical,first_stage_mount,slotselect
+vendor                                   /vendor             ext4    ro,barrier=1 wait,avb=vbmeta_vendor,logical,first_stage_mount,slotselect
+product                                  /product            ext4    ro,barrier=1 wait,avb=vbmeta,logical,first_stage_mount,slotselect
 /dev/block/by-name/metadata              /metadata           ext4    nodev,noatime,nosuid,errors=panic wait,formattable,first_stage_mount,check
 
 /dev/block/by-name/socko                 /socko              ext4    noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc    wait,check,slotselect
@@ -42,4 +42,3 @@ product                                  /product            ext4    ro,barrier=
 /dev/block/by-name/userdata              /data               f2fs    noatime,nosuid,nodev,discard,inline_xattr,inline_data wait,check,reservedsize=128M,formattable
 /dev/block/by-name/prodnv                /mnt/vendor         ext4    noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc     wait,check
 /dev/block/mmcblk1p1                     /external_sd        vfat    defaults    defaults
-/dev/block/sda1                          /usb-otg            auto    defaults    defaults
