@@ -1,4 +1,4 @@
-
+/dev/block/by-name/prodnv                /mnt/vendor         ext4    noatime,nosuid,nodev,noauto_da_alloc    wait,check
 /dev/block/by-name/socko                 /socko              ext4    noatime,nosuid,nodev,noauto_da_alloc    wait,check,slotselect,backup=1
-/dev/block/by-name/odmko                 /odmko              ext4    noatime,nosuid,nodev,noauto_da_alloc    wait,check,slotselect,backup=1
+
 
