@@ -18,7 +18,8 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # VIRTUAL A/b
 ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
-
+#HIDL
+PRODUCT_ENFORCE_VINTF_MANIFEST := true
 #PACKAGES
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
