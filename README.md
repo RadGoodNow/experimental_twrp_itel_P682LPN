@@ -26,7 +26,7 @@ Minor checks
 - [x] reboot to recovery
 - [x] poweroff
 - [x] battery level
-- [ ] temperature
+- [x] temperature
 - [ ] encrypted backups
 - [x] input devices via USB (USB-OTG) - keyboard, mouse and disks
 - [x] USB mass storage export
