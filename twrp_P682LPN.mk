@@ -5,8 +5,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 #INHERIT GSI KEYS
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
-#INHERIT TWRP
-$(call inherit-product, vendor/twrp/config/common.mk)
+#INHERIT PBRP
+$(call inherit-product, vendor/pb/config/common.mk)
 
 #INHERIT FROM THIS DEVICE TREE
 $(call inherit-product, device/itel/P682LPN/device.mk)
