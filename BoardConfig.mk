@@ -107,6 +107,13 @@ BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_HAS_LARGE_FILESYSTEM := true
 
+# MTP
+TW_HAS_MTP := true
+TW_MTP_DEVICE := /dev/mtp_usb
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage/lun.%d/file
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
+
+
 #FILESYSTEMS
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USERIMAGES_USE_EXT4 := true
