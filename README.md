@@ -1,5 +1,5 @@
 # experimental_twrp_itel_P682LPN
- created by RadGoodNow and NikitasDiscord
+ created by RadGoodNow and Nikitas
 
  Blocking checks
 - [x] Correct screen/recovery size
@@ -10,23 +10,25 @@
 - [x] ADB
 
 Medium checks
-- [ ] update.zip sideload
+- [x] update.zip sideload
 - [x] UI colors (red/blue inversions)
 - [x] Screen goes off and on
 - [x] F2FS/EXT4 Support, exFAT/NTFS where supported
 - [x] all important partitions listed in mount/backup lists
 - [x] backup/restore to/from external (USB-OTG) storage
-- [ ] backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
+- [x] backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
+- [ ] Correct date
 - [ ] decrypt /data
 - [x] working /data (ONLY if modified vendor)
-- [ ] Correct date
+- [ ] system partition in r/w
+- [ ] mount vendor partition
 
 Minor checks
 - [ ] MTP export
 - [x] reboot to bootloader
 - [x] reboot to recovery
 - [x] poweroff
-- [x] battery level
+- [x] battery level (partially)
 - [x] temperature
 - [ ] encrypted backups
 - [x] input devices via USB (USB-OTG) - keyboard, mouse and disks
