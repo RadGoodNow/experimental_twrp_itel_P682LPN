@@ -17,7 +17,8 @@ Medium checks
 - [x] all important partitions listed in mount/backup lists
 - [x] backup/restore to/from external (USB-OTG) storage
 - [ ] backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
-- [x] decrypt /data(modified vendor will be used)
+- [ ] decrypt /data
+- [x] working /data (ONLY if modified vendor)
 - [ ] Correct date
 
 Minor checks
