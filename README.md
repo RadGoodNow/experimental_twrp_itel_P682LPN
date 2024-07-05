@@ -19,7 +19,7 @@ Medium checks
 - [x] backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
 - [ ] Correct date
 - [ ] decrypt /data
-- [x] working /data (ONLY if modified vendor)
+- [x] working /data (ONLY with modified vendor)
 - [ ] system partition in r/w
 - [ ] mount vendor partition
 
