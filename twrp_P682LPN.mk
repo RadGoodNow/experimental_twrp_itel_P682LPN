@@ -1,16 +1,18 @@
-#INHERIT COMMON STUFF
+# Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
-#INHERIT GSI KEYS
+
+# Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
-#INHERIT PBRP
+
+# Inherit common PBRP stuff.
 $(call inherit-product, vendor/pb/config/common.mk)
 
-#INHERIT FROM THIS DEVICE TREE
+# Inherit from P682LPN device
 $(call inherit-product, device/itel/P682LPN/device.mk)
 
+# Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := P682LPN
 PRODUCT_NAME := twrp_P682LPN
 PRODUCT_BRAND := itel
