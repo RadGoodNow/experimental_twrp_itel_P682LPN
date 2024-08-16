@@ -1,5 +1,5 @@
 # experimental_twrp_itel_P682LPN
- created by RadGoodNow and NikitasDiscord
+ created by RadGoodNow and zanikitas
 
  Blocking checks
 - [x] Correct screen/recovery size
@@ -34,8 +34,3 @@ Minor checks
 - [ ] vibrate
 - [x] screenshot
 - [x] partition SD card
-
-Finally, crashes are fixed.
-
-BTW, unofficialtwrp.com, stop stealing our TWRP images. We have warned you :) 
-and yeah fix your "Contact us" page, we want to talk with you guys.
