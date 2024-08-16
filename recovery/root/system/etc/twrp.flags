@@ -7,7 +7,6 @@
 /vendor                  ext4     /dev/block/mapper/vendor                     flags=display="Vendor";slotselect;backup=1;flashimg=1;wipeingui
 /boot                    emmc     /dev/block/by-name/boot                      flags=display="Boot";slotselect;backup=1;flashimg=1;wipeingui
 /dtbo                    emmc     /dev/block/by-name/dtbo                      flags=display="DTBO";slotselect;backup=1
-/uboot                   emmc     /dev/block/by-name/uboot                     flags=display="U-Boot";slotselect;backup=1
 /misc                    emmc     /dev/block/by-name/misc                      flags=display=misc;backup=1
 /metadata                ext4     /dev/block/by-name/metadata                  flags=display=metadata;backup=1;wrappedkey
 /data                    f2fs     /dev/block/by-name/userdata                  flags=display=Userdata;slotselect;backup=1;wipeingui
