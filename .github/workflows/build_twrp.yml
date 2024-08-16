@@ -14,15 +14,15 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/Veynamer/twrp_device_infinix_X6816D'
+        default: 'https://github.com/RadGoodNow/experimental_twrp_itel_P682LPN'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'twrp-11'
+        default: 'main'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/infinix/X6816D'
+        default: 'device/itel/P682LPN'
       COMMON_TREE_URL:
         description: 'COMMON_TREE_URL (if no common tree, leave blank)'
         required: false
@@ -32,11 +32,11 @@ on:
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'X6816D'
+        default: 'P682LPN'
       MAKEFILE_NAME:
         description: 'MAKEFILE_NAME'
         required: true
-        default: 'twrp_X6816D'
+        default: 'twrp_P682LPN'
       BUILD_TARGET:
         description: 'BUILD_TARGET'
         required: true

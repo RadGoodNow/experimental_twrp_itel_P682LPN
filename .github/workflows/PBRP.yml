@@ -14,7 +14,7 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/RadGoodNowYT/experimental_twrp_itel_P682LPN'
+        default: 'https://github.com/RadGoodNow/experimental_twrp_itel_P682LPN'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
