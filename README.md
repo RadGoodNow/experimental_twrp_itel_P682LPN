@@ -19,7 +19,7 @@ Medium checks
 - [ ] Correct date
 - [ ] decrypt /data
 - [x] working /data (ONLY with modified vendor)
-- [ ] system partition in r/w
+- [x] system partition in r/w (partially)
 - [ ] mount vendor partition
 
 Minor checks
@@ -29,7 +29,7 @@ Minor checks
 - [x] poweroff
 - [x] battery level (partially)
 - [x] temperature
-- [ ] encrypted backups
+- [x] encrypted backups
 - [x] input devices via USB (USB-OTG) - keyboard, mouse and disks
 - [x] USB mass storage export
 - [x] set brightness
