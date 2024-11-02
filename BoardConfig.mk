@@ -139,8 +139,8 @@ TARGET_RECOVERY_DEVICE_MODULES += strace
 RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/strace
 
 # TWRP specific flags & configuration
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.1.xml # needs to be tested
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml # needs to be tested
+#DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.1.xml # needs to be tested
+#DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml # needs to be tested
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TW_DEVICE_VERSION := RadGoodNow@4pda and NikitasFD@4pda
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
