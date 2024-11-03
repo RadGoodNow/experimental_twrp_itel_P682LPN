@@ -6,3 +6,21 @@ on property:hwservicemanager.ready=true
     start vendor.gatekeeper-1-0
     start vendor.unisoc.keymaster-4-1
     setprop vendor.sprd.storageproxyd.enabled 1
+
+on property:ro.crypto.state=unsupported
+    stop vendor.unisoc.keymaster-4-1
+    stop vendor.gatekeeper-1-0
+    stop servicemanager
+    stop hwservicemanager
+
+on property:ro.crypto.state=unencrypted
+    stop vendor.unisoc.keymaster-4-1
+    stop vendor.gatekeeper-1-0
+    stop servicemanager
+    stop hwservicemanager
+
+on property:twrp.decrypt.done=true
+    stop vendor.unisoc.keymaster-4-1
+    stop vendor.gatekeeper-1-0
+    stop servicemanager
+    stop hwservicemanager
