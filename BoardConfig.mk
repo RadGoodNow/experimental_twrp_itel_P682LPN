@@ -84,8 +84,9 @@ BOARD_SUPER_PARTITION_SIZE := 9126805504
 BOARD_ITEL_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext vendor product
 BOARD_ITEL_DYNAMIC_PARTITIONS_SIZE := 9122611200
 
-# Temperature path
-TW_CUSTOM_CPU_TEMP_PATH = /sys/devices/platform/soc/soc:aon/64200000.spi/spi_master/spi4/spi4.0/sc27xx-fgu/power_supply/sc27xx-fgu/temp
+# Temperature path (TO BE TESTED)
+TW_CUSTOM_CPU_TEMP_PATH = /sys/class/thermal/thermal_zone3/temp
+#TW_CUSTOM_CPU_TEMP_PATH = /sys/devices/platform/soc/soc:aon/64200000.spi/spi_master/spi4/spi4.0/sc27xx-fgu/power_supply/sc27xx-fgu/temp
 
 # Bootimage size
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
