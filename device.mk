@@ -31,6 +31,12 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster4 \
     libkeymaster41 \
     libpuresoftkeymasterdevice
+    vold \
+    wait_for_keymaster
+
+RECOVERY_BINARY_SOURCE_FILES += \
+    $(TARGET_OUT_EXECUTABLES)/vold \
+    $(TARGET_OUT_EXECUTABLES)/wait_for_keymaster
 
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
