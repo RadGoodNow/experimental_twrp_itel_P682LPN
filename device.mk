@@ -30,7 +30,7 @@ PRODUCT_PACKAGES += \
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster4 \
     libkeymaster41 \
-    libpuresoftkeymasterdevice
+    libpuresoftkeymasterdevice \
     vold \
     wait_for_keymaster
 
