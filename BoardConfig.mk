@@ -131,6 +131,7 @@ BOARD_ROOT_EXTRA_FOLDERS += external_sd
 TW_INCLUDE_FASTBOOTD := true
 TW_INCLUDE_NTFS_3G := true
 TW_INCLUDE_RESETPROP := true
+TW_INCLUDE_LPTOOLS := true
 TW_INCLUDE_REPACKTOOLS := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
@@ -141,15 +142,12 @@ TARGET_RECOVERY_DEVICE_MODULES += strace
 RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/strace
 
 # TWRP specific flags & configuration
-#DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.1.xml # needs to be tested
-#DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml # needs to be tested
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TW_DEVICE_VERSION := RadGoodNow@4pda and NikitasFD@4pda
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TW_HAS_NO_RECOVERY_PARTITION := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_MTP_DEVICE := /dev/mtp_usb
-TW_NO_FASTBOOT_BOOT := true
 TW_NO_LEGACY_PROPS := true
 TW_THEME := portrait_hdpi
 TW_HAS_MTP := true

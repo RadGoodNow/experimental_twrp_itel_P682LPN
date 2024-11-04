@@ -32,6 +32,8 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster41 \
     libpuresoftkeymasterdevice \
     vold \
+	vdc \
+	uncrypt \
     wait_for_keymaster
 
 RECOVERY_BINARY_SOURCE_FILES += \

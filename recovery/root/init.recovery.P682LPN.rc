@@ -49,7 +49,7 @@ service logd /system/bin/logd
     writepid /dev/cpuset/system-background/tasks
 
 on boot
-	start boot-hal-1-1
+    start boot-hal-1-1
     start health-hal-2-1
 
 on post-fs-data
