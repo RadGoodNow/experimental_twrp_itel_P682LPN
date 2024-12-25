@@ -48,6 +48,9 @@ service logd /system/bin/logd
     seclabel u:r:recovery:s0
     writepid /dev/cpuset/system-background/tasks
 
+on early-fs
+    start vold
+
 on boot
     start boot-hal-1-1
     start health-hal-2-1

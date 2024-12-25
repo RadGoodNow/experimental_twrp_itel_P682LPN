@@ -68,6 +68,8 @@ service engpcclient /vendor/bin/engpc
     group root sdcard_rw system radio shell net_bt_admin input audio
 
 on init
+    start boot-hal-1-1
+    start health-hal-2-1
     # Apply strict SELinux checking of PROT_EXEC on mmap/mprotect calls.
     write /sys/fs/selinux/checkreqprot 0
     start healthd
@@ -194,6 +196,7 @@ on post-fs-data
     # We restorecon /data in case the userdata partition has been reset.
     restorecon /data
     mkdir /data/misc 01771 system misc
+    mkdir /data/vendor
     #mkdir /data/misc/bluedroid 0770 bluetooth net_bt_stack
     mkdir /data/misc/bluetooth 0770 system system
     copy /system/etc/bluetooth/bt_stack.conf /data/misc/bluedroid/bt_stack.conf
