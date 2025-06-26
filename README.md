@@ -19,7 +19,7 @@ Medium checks
 - [ ] Correct date
 - [ ] decrypt /data
 - [x] working /data (ONLY with modified vendor)
-- [x] system partition in r/w (partially)
+- [ ] system partition in r/w
 - [ ] mount vendor partition
 
 Minor checks
