@@ -20,7 +20,7 @@ Medium checks
 - [ ] decrypt /data
 - [x] working /data (ONLY with modified vendor)
 - [ ] system partition in r/w
-- [ ] mount vendor partition
+- [x] mount vendor partition
 
 Minor checks
 - [ ] MTP export
@@ -28,7 +28,7 @@ Minor checks
 - [x] reboot to recovery
 - [x] poweroff
 - [x] battery level (partially)
-- [x] temperature
+- [x] temperature (battery only)
 - [x] encrypted backups
 - [x] input devices via USB (USB-OTG) - keyboard, mouse and disks
 - [x] USB mass storage export
