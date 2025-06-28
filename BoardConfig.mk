@@ -83,7 +83,7 @@ BOARD_SUPER_PARTITION_GROUPS := itel_dynamic_partitions
 BOARD_SUPER_PARTITION_SIZE := 9126805504 
 BOARD_ITEL_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext vendor product
 BOARD_ITEL_DYNAMIC_PARTITIONS_SIZE := 9122611200
-# CPU Temperature path (TO BE TESTED)
+# CPU Temperature path (no worky)
 TW_CUSTOM_CPU_TEMP_PATH = /sys/class/thermal/thermal_zone3/temp
 
 # Bootimage size
