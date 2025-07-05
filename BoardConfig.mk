@@ -83,7 +83,7 @@ BOARD_SUPER_PARTITION_GROUPS := itel_dynamic_partitions
 BOARD_SUPER_PARTITION_SIZE := 9126805504 
 BOARD_ITEL_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext vendor product
 BOARD_ITEL_DYNAMIC_PARTITIONS_SIZE := 9122611200
-# CPU Temperature path (no worky)
+# CPU Temperature path (no worky) battery only
 TW_CUSTOM_CPU_TEMP_PATH = /sys/class/thermal/thermal_zone3/temp
 
 # Bootimage size
@@ -151,10 +151,7 @@ RECOVERY_SDCARD_ON_DATA := true
 TW_MTP_DEVICE := /dev/mtp_usb
 TW_NO_LEGACY_PROPS := true
 TW_THEME := portrait_hdpi
-TW_HAS_MTP := true
-
-# Don't build & don't include in build
-TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_HAS_MLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_SUPERSU := true
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_APEX := true
