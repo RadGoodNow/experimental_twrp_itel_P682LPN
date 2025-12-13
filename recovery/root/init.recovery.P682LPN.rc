@@ -2,38 +2,16 @@
 import /init.recovery.common.rc
 import /init.recovery.unisoc_decrypt.rc
 
-#service name must be < 16
-service vendor.rpmbproxy /vendor/bin/sprdstorageproxyd -f rpmb -d /dev/trusty-ipc-dev0 -p /data/vendor/sprd_ss -r /dev/mmcblk0rpmb
-    class core
-    group system
-    oneshot
-    seclabel u:r:tee:s0
-
-service vendor.nsproxy /vendor/bin/sprdstorageproxyd -f ns -d /dev/trusty-ipc-dev0 -p /data/vendor/sprd_ss -r /dev/mmcblk0rpmb
-    class late_start
-    group system
-    seclabel u:r:tee:s0
-
-service keystore_auth /system/bin/keystore_auth
-    oneshot
+service vendor.sprd.hardware.vibrator-service /system/bin/hw/vendor.sprd.hardware.vibrator-service
+    class early_hal
     user system
-    group root
-    disabled
+    group system drmrpc
     seclabel u:r:recovery:s0
 
-service keystore /system/bin/keystore /tmp/misc/keystore
-    user root
-    group root drmrpc readproc log
-    disabled
-    seclabel u:r:recovery:s0
-
-service wait_for_keymaster /system/bin/wait_for_keymaster
-    user root
-    group root
-    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
-    disabled
+service watchdogd /system/bin/watchdogd 10 30
+    class core
     oneshot
-    seclabel u:r:recovery:s0
+    seclabel u:r:watchdogd:s0
 
 service logd /system/bin/logd
     socket logd stream 0666 logd logd
@@ -48,21 +26,6 @@ service logd /system/bin/logd
     seclabel u:r:recovery:s0
     writepid /dev/cpuset/system-background/tasks
 
-on early-fs
-    start vold
-
-on boot
-    start boot-hal-1-1
-    start health-hal-2-1
-
-on post-fs-data
-    mkdir /data/vendor/sprd_ss 0770 system system
-
-on property:vendor.sprd.storageproxyd.enabled=1
-    mkdir /data/vendor/sprd_ss 0770 system system
-    start vendor.rpmbproxy
-    start vendor.nsproxy
-
 on init
 	setprop sys.usb.config adb
 	mkdir /dev/cpuset/system-background
@@ -71,12 +34,12 @@ on init
 	mount_all /system/etc/recovery.tmpfsdata.fstab
 	insmod /socko/adaptive-ts.ko
 	insmod /socko/mali_kbase.ko
-	mkdir /dev/binderfs
-	symlink /dev/binderfs/binder /dev/binder
-	symlink /dev/binderfs/vndbinder /dev/vndbinder
-	symlink /dev/binderfs/hwbinder /dev/hwbinder
-	chmod 0666 /dev/binder
-	chmod 0666 /dev/hwbinder
-	chmod 0666 /dev/vndbinder
-	chmod 0755 /dev/binderfs
 	mount tracefs tracefs /sys/kernel/tracing
+on boot
+    start servicemanager
+    start hwservicemanager
+    start vndservicemanager
+    start watchdogd
+    start vendor.sprd.hardware.vibrator-service
+
+    

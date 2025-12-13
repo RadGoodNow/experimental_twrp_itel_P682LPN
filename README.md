@@ -5,7 +5,7 @@
 - [x] Working Touch, screen
 - [x] Backup to internal/microSD
 - [x] Restore from internal/microSD
-- [x] reboot to system
+- [ ] reboot to system (manual cmdline change required) 
 - [x] ADB
 
 Medium checks
@@ -18,9 +18,9 @@ Medium checks
 - [x] backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
 - [ ] Correct date
 - [ ] decrypt /data
-- [x] working /data (ONLY with modified vendor)
+- [ ] working /data
 - [x] system partition in r/w (partially)
-- [ ] mount vendor partition
+- [x] mount vendor partition
 
 Minor checks
 - [ ] MTP export
@@ -33,6 +33,6 @@ Minor checks
 - [x] input devices via USB (USB-OTG) - keyboard, mouse and disks
 - [x] USB mass storage export
 - [x] set brightness
-- [ ] vibrate
+- [x] vibrate
 - [x] screenshot
 - [x] partition SD card
